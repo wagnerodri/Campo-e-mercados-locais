@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relatório — P2 Campo e Mercados Locais</title>
+  <!-- Estilos de impressao, tipografia, tabelas e caixas de destaque. -->
   <style>
+    /* Formato e margens do papel. */
     @page {
       size: A4;
       margin: 16mm;
     }
 
+    /* Base visual e dimensoes consistentes dos elementos. */
     * {
       box-sizing: border-box;
     }
@@ -20,6 +23,7 @@
       font: 10pt/1.45 Arial, Helvetica, sans-serif;
     }
 
+    /* Hierarquia de titulos e espacamento do texto. */
     h1,
     h2,
     h3 {
@@ -59,6 +63,7 @@
       font-size: 11pt;
     }
 
+    /* Cada bloco representa uma pagina do relatorio. */
     .pagina {
       min-height: 260mm;
     }
@@ -67,6 +72,7 @@
       page-break-before: always;
     }
 
+    /* Rotulos de secao e caixas de informacao. */
     .marcador {
       margin: 0 0 2mm;
       color: #ad6d24;
@@ -89,6 +95,7 @@
       border-left-color: #d99242;
     }
 
+    /* Tabelas de arquitetura, dados e tecnologias. */
     table {
       width: 100%;
       margin: 2mm 0 4mm;
@@ -121,6 +128,7 @@
   </style>
 </head>
 <body>
+  <!-- Pagina 1: problema, publico, simulacao e impacto. -->
   <section class="pagina">
     <p class="marcador">P2 · Tecnologia Cidadã</p>
     <h1>Campo e Mercados Locais</h1>
@@ -129,8 +137,8 @@
     <h2>Problema, cidadão e evidência</h2>
     <p><strong>Cidadão afetado:</strong> pequeno produtor local e integrantes da rede de vizinhança, comércio e consumo no Campanário, em Diadema (SP).</p>
     <p><strong>Problema:</strong> dificuldade de aproximar produtores de compradores, cooperativas, comércio, escolas e serviços, além de encontrar e compartilhar informações úteis para a produção.</p>
-    <div class="caixa pendente">
-      <strong>Evidência local ainda não coletada:</strong> a equipe definiu o território como Campanário, Diadema (SP), mas ainda não realizou conversa, observação nem reuniu dado público local. Portanto, a necessidade é uma hipótese de projeto, não uma conclusão validada. Antes da entrega final, registrar uma evidência verificável dessa região.
+    <div class="caixa">
+      <strong>Cenário simulado (não é dado de campo):</strong> para esta atividade, considera-se hipoteticamente que um pequeno produtor do Campanário precisa divulgar sua produção e encontrar compradores próximos. O exemplo foi criado para demonstrar a proposta; não resulta de entrevista, observação ou pesquisa e não confirma uma necessidade real da região.
     </div>
 
     <h2>ODS e proposta de impacto</h2>
@@ -140,10 +148,11 @@
     </ul>
     <p>O mural permite cadastrar, consultar, editar e remover ofertas e necessidades, usando apenas dados fictícios. Uma evolução sustentável pode manter o acesso básico gratuito e financiar suporte, capacitação e expansão por parcerias com cooperativas, associações, governos locais e editais de impacto. A operação deve ser validada gradualmente com a comunidade e não comercializar dados pessoais.</p>
 
-    <h2>Validação da necessidade</h2>
-    <p>A hipótese precisa ser conferida com produtores e organizações do Campanário, em Diadema (SP). A equipe pode registrar uma conversa breve, observação de feira/canal de venda ou estatística pública, com fonte, data e contexto, sem expor dados pessoais.</p>
+    <h2>Como interpretar a simulação</h2>
+    <p>O cenário fictício ilustra como o mural poderia responder a uma dificuldade de divulgação e conexão com compradores. Ele não representa fala de morador, resultado de entrevista nem estatística local. Uma aplicação real exigiria validar a hipótese com a comunidade e fontes verificáveis.</p>
   </section>
 
+  <!-- Pagina 2: estrutura tecnica e modelo de dados. -->
   <section class="pagina">
     <p class="marcador">Arquitetura e dados</p>
     <h2>Páginas, arquivos e caminho dos dados</h2>
@@ -180,6 +189,7 @@
     <p>HTML5 semântico, CSS3, JavaScript, Bootstrap 5.3 (grid e cards) e Font Awesome 6.5 (ícones). O CSS é Mobile First; o layout muda em 600 px e 900 px. O tema inicial segue a preferência do dispositivo, um botão acessível alterna entre claro e escuro e animações respeitam movimento reduzido.</p>
   </section>
 
+  <!-- Pagina 3: seguranca, validacao e limitacoes. -->
   <section class="pagina">
     <p class="marcador">Segurança, validação e limites</p>
     <h2>Ameaças e mitigações</h2>
@@ -192,12 +202,12 @@
     <h2>Validação do protótipo</h2>
     <p>Testado no navegador em 390 × 844 (celular), 768 × 1024 (tablet) e 1440 × 900 (desktop), sem rolagem horizontal; o menu mobile abre e a navegação desktop permanece visível. O fluxo CRUD adicionou, listou, editou e removeu um item e registrou data/hora, ação e resultado.</p>
     <p>Entradas obrigatórias vazias, texto só com espaços e tentativa de inserir marcação foram rejeitadas. O limite de 60 caracteres do campo item foi aplicado pelo HTML. O botão de tema é operável por teclado e atualiza o rótulo acessível. As publicações não persistem após recarregar a página.</p>
-    <div class="caixa pendente">
-      <strong>Validação da necessidade ainda pendente:</strong> a região foi definida como Campanário, Diadema (SP), mas ainda não houve conversa, observação ou pesquisa de dado público. Esta validação deve ser feita pela equipe com cidadãos da região antes da entrega final.
+    <div class="caixa">
+      <strong>Limite da atividade:</strong> a situação apresentada é fictícia e serve apenas como simulação acadêmica. Não houve coleta de evidência real no Campanário, em Diadema (SP), nem validação da hipótese com moradores.
     </div>
 
     <h2>Limitações e próximos passos</h2>
-    <p>Não há backend, armazenamento persistente das publicações, contas, moderação, busca de clima/preços em tempo real nem canal real de negociação. A preferência de tema fica apenas no navegador; e-mail e contatos de parceiros não são coletados. O próximo passo é validar a necessidade com cidadãos da região.</p>
+    <p>Não há backend, armazenamento persistente das publicações, contas, moderação, busca de clima/preços em tempo real nem canal real de negociação. A preferência de tema fica apenas no navegador; e-mail e contatos de parceiros não são coletados. Se o projeto avançar além da simulação acadêmica, será necessário validar a necessidade com a comunidade.</p>
 
     <h2>Declaração de IA e créditos</h2>
     <p>Foi utilizado apoio de IA para adaptar o código-base, implementar interações e preparar a documentação. Recursos de terceiros: Bootstrap (getbootstrap.com), Font Awesome (fontawesome.com) e imagem de fundo Unsplash (images.unsplash.com/photo-1500937386664-56d1dfef3854).</p>

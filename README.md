@@ -6,7 +6,7 @@ Campo-e-mercados-locais conecta pequenos produtores e a comunidade local.
 
 O mural permite demonstrar a publicação e organização de ofertas e necessidades relacionadas à produção local. O público principal são pequenos produtores; cooperativas, comércio, escolas e consumidores podem participar da rede. O território definido para validação é o Campanário, em Diadema (SP).
 
-O problema de acesso a informação e canais de venda é a hipótese que orienta o protótipo. A equipe ainda não coletou evidência local; isso precisa ser validado antes da entrega final, sem inventar entrevistas ou dados.
+O problema de acesso a informação e canais de venda é a hipótese que orienta o protótipo. Para esta atividade, usamos um cenário fictício: um pequeno produtor hipotético precisa divulgar sua produção e encontrar compradores próximos. Não houve entrevista, observação ou pesquisa local; o exemplo não deve ser apresentado como dado real nem como validação da hipótese.
 
 ODS relacionados:
 
@@ -87,7 +87,7 @@ Capturas:
 ![Tela inicial em tablet](docs/prints/tablet.png)
 ![Mural em desktop](docs/prints/desktop.png)
 
-Relatório: [PDF](docs/relatorio.pdf) · [fonte HTML](docs/relatorio.html). O território escolhido é Campanário, Diadema (SP); a evidência local permanece pendente até a equipe coletar uma conversa, observação ou dado público.
+Relatório: [PDF](docs/relatorio.pdf) · [fonte HTML](docs/relatorio.html). O território de referência é Campanário, Diadema (SP), mas o caso apresentado é uma simulação acadêmica e não uma evidência coletada na região.
 
 ## Sustentabilidade como negócio de impacto
 

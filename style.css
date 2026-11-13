@@ -1,3 +1,4 @@
+/* Cores, superficies e variaveis dos temas. */
 :root {
   color-scheme: light;
   --verde: #176f83;
@@ -28,6 +29,7 @@
   --topo-fundo: rgba(247, 246, 241, 0.97);
 }
 
+/* Cores usadas quando o tema escuro esta ativo. */
 :root[data-tema="escuro"] {
   color-scheme: dark;
   --verde: #0b5263;
@@ -58,6 +60,7 @@
   --topo-fundo: rgba(21, 30, 34, 0.97);
 }
 
+/* Preferencia escura do sistema antes de uma escolha manual. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema]) {
     color-scheme: dark;
@@ -90,6 +93,7 @@
   }
 }
 
+/* Normalizacao basica e tipografia compartilhada. */
 * {
   box-sizing: border-box;
 }
@@ -158,6 +162,7 @@ p {
   margin-bottom: 18px;
 }
 
+/* Cabecalho, marca, menu e controle de tema. */
 .topo {
   position: sticky;
   z-index: 20;
@@ -275,6 +280,7 @@ p {
   font-weight: 700;
 }
 
+/* Banner inicial e botoes principais. */
 .hero {
   display: flex;
   min-height: 540px;
@@ -357,6 +363,7 @@ p {
   background: var(--verde-claro);
 }
 
+/* Secoes gerais, cartoes informativos e proposta visual. */
 .secao {
   width: min(1160px, 100%);
   margin: 0 auto;
@@ -421,6 +428,7 @@ p {
   margin-bottom: 0;
 }
 
+/* Formulario, publicacoes e painel de atividades do mural. */
 .mural-secao {
   max-width: 1240px;
 }
@@ -640,6 +648,7 @@ p {
   font-weight: 700;
 }
 
+/* Bloco de destaque da proposta de impacto. */
 .destaque {
   padding: 64px 20px;
   color: var(--branco);
@@ -659,6 +668,7 @@ p {
   color: #ffe0bb;
 }
 
+/* Cabecalhos usados nas paginas internas. */
 .pagina-cabecalho {
   padding-top: 68px;
   padding-bottom: 46px;
@@ -673,6 +683,7 @@ p {
   font-size: 1.05rem;
 }
 
+/* Texto e ilustracao da pagina Como funciona. */
 .sobre-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -707,6 +718,7 @@ p {
   border-top: 3px dashed var(--terra-escuro);
 }
 
+/* Marcadores dos passos e ajustes das paginas de rede e privacidade. */
 .passo-numero {
   display: inline-block;
   margin-bottom: 18px;
@@ -746,6 +758,7 @@ p {
   border-left: 4px solid var(--terra);
 }
 
+/* Rodape compartilhado entre as paginas. */
 .footer {
   padding: 42px 20px 18px;
   color: var(--branco);
@@ -790,6 +803,7 @@ p {
   display: none !important;
 }
 
+/* Ajustes para telas a partir de 600 px. */
 @media (min-width: 600px) {
   h1 {
     font-size: clamp(2.7rem, 5.5vw, 3.7rem);
@@ -842,6 +856,7 @@ p {
   }
 }
 
+/* Reducao de espacamento em celulares estreitos. */
 @media (max-width: 380px) {
   .topo {
     gap: 6px;
@@ -872,6 +887,7 @@ p {
   }
 }
 
+/* Navegacao e colunas para telas a partir de 900 px. */
 @media (min-width: 900px) {
   .topo {
     padding-right: max(28px, calc((100% - 1160px) / 2));
@@ -929,6 +945,7 @@ p {
   }
 }
 
+/* Respeita a preferencia por menos movimento. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
