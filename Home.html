@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mural comunitário para conectar pequenos produtores, cooperativas, comércio e consumidores locais.">
+  <title>Campo e Mercados Locais | Mural comunitário</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="Home.html" aria-label="Campo e Mercados Locais, início">
+      <span class="marca-icone" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+      <span>Campo <span class="marca-e">&</span><br>Mercados Locais</span>
+    </a>
+    <input class="menu-checkbox" type="checkbox" id="menu-home">
+    <label class="menu-button" for="menu-home" aria-label="Abrir menu"><i class="fas fa-bars" aria-hidden="true"></i></label>
+    <nav id="nav-principal" aria-label="Navegação principal">
+      <a class="ativo" href="Home.html" aria-current="page">Mural</a>
+      <a href="somos.html">Como funciona</a>
+      <a href="profissionais.html">Rede local</a>
+      <a href="contatos.html">Privacidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-conteudo">
+        <p class="eyebrow">Campanário · Diadema · SP</p>
+        <h1>Produção local mais conectada, do plantio à comunidade.</h1>
+        <p>Um mural simples para compartilhar ofertas e necessidades, aproximando produtores locais, cooperativas, comércio, escolas e consumidores do Campanário e da região.</p>
+        <a class="btn btn-principal" href="#mural">Acessar o mural <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="proposta-titulo">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Informação e colaboração</p>
+        <h2 id="proposta-titulo">Mais visibilidade para quem produz perto de você</h2>
+        <p>O protótipo demonstra como uma comunidade pode divulgar produtos, buscar insumos e trocar oportunidades sem expor dados pessoais.</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <article class="card info-card h-100">
+            <div class="card-body">
+              <i class="fa-solid fa-cloud-sun-rain card-icone" aria-hidden="true"></i>
+              <h3 class="card-title">Clima e manejo</h3>
+              <p class="card-text">A proposta pode reunir orientações e fontes abertas para apoiar o planejamento da produção local.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card info-card h-100">
+            <div class="card-body">
+              <i class="fa-solid fa-store card-icone" aria-hidden="true"></i>
+              <h3 class="card-title">Mercado e preços</h3>
+              <p class="card-text">O mural aproxima ofertas e demandas da região para incentivar compras e parcerias locais.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card info-card h-100">
+            <div class="card-body">
+              <i class="fa-solid fa-handshake-angle card-icone" aria-hidden="true"></i>
+              <h3 class="card-title">Rede de apoio</h3>
+              <p class="card-text">Cooperativas, comércio e instituições podem compartilhar oportunidades e serviços úteis ao campo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao mural-secao" id="mural" aria-labelledby="mural-titulo">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Protótipo funcional</p>
+        <h2 id="mural-titulo">Mural de ofertas e necessidades</h2>
+        <p>Use informações fictícias para testar. Os registros ficam somente nesta página e desaparecem ao recarregar.</p>
+      </div>
+
+      <div class="mural-layout">
+        <form class="formulario-mural" id="form-mural" novalidate>
+          <h3 id="form-titulo">Publicar no mural</h3>
+          <input type="hidden" id="registro-id">
+
+          <label for="tipo">O que você quer compartilhar?</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione uma opção</option>
+            <option value="Oferta">Tenho para oferecer</option>
+            <option value="Procura">Estou procurando</option>
+          </select>
+
+          <label for="item">Produto, serviço ou necessidade</label>
+          <input id="item" name="item" type="text" minlength="2" maxlength="60" required autocomplete="off" aria-describedby="item-ajuda">
+          <small id="item-ajuda">De 2 a 60 caracteres. Não informe nome, telefone ou endereço pessoal.</small>
+
+          <label for="cidade">Município ou região</label>
+          <input id="cidade" name="cidade" type="text" minlength="2" maxlength="50" required autocomplete="off">
+
+          <label for="detalhes">Detalhes (opcional)</label>
+          <textarea id="detalhes" name="detalhes" maxlength="240" rows="4" aria-describedby="detalhes-ajuda"></textarea>
+          <small id="detalhes-ajuda">Até 240 caracteres. Evite dados pessoais ou informações confidenciais.</small>
+
+          <p class="aviso-privacidade"><i class="fa-solid fa-lock" aria-hidden="true"></i> Privacidade: este protótipo não pede dados pessoais nem envia as informações para um servidor.</p>
+          <div class="form-acoes">
+            <button class="btn btn-principal" type="submit" id="salvar-registro">Adicionar ao mural</button>
+            <button class="btn btn-secundario" type="button" id="cancelar-edicao" hidden>Cancelar edição</button>
+          </div>
+          <p class="mensagem-form" id="mensagem-form" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="lista-painel">
+          <div class="lista-cabecalho">
+            <h3>Publicações</h3>
+            <span id="contador-registros">0 registros</span>
+          </div>
+          <button class="botao-lista" type="button" id="atualizar-lista">Atualizar lista</button>
+          <div id="lista-registros" class="lista-registros" aria-live="polite"></div>
+          <p id="lista-vazia" class="lista-vazia">Ainda não há publicações. Você pode adicionar a primeira usando o formulário.</p>
+
+          <section class="atividades" aria-labelledby="atividades-titulo">
+            <h3 id="atividades-titulo">Atividades recentes</h3>
+            <ol id="lista-atividades" class="lista-atividades" aria-live="polite"></ol>
+            <p id="atividades-vazias">As operações realizadas aparecerão aqui.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="destaque">
+      <div>
+        <p class="eyebrow">Um projeto de impacto</p>
+        <h2>Valorizar a produção local fortalece toda a comunidade.</h2>
+        <p>Uma evolução possível é oferecer ferramentas acessíveis a cooperativas e associações, com apoio de parcerias locais e conteúdo aberto — sem cobrar do produtor pelo acesso básico.</p>
+        <a class="btn btn-claro" href="somos.html">Conheça a proposta</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="marca-rodape">Campo & Mercados Locais</div>
+      <p>Conectando produção, mercado e comunidade.</p>
+      <a href="contatos.html">Privacidade e limitações do protótipo</a>
+    </div>
+    <p class="footer-bottom">Protótipo acadêmico de Tecnologia Cidadã · 2026</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

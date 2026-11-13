@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leia como os dados são tratados neste protótipo Campo e Mercados Locais.">
+  <title>Campo e Mercados Locais | Privacidade</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="Home.html" aria-label="Campo e Mercados Locais, início">
+      <span class="marca-icone" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+      <span>Campo <span class="marca-e">&</span><br>Mercados Locais</span>
+    </a>
+    <input class="menu-checkbox" type="checkbox" id="menu-privacidade">
+    <label class="menu-button" for="menu-privacidade" aria-label="Abrir menu"><i class="fas fa-bars" aria-hidden="true"></i></label>
+    <nav id="nav-principal" aria-label="Navegação principal">
+      <a href="Home.html">Mural</a>
+      <a href="somos.html">Como funciona</a>
+      <a href="profissionais.html">Rede local</a>
+      <a class="ativo" href="contatos.html" aria-current="page">Privacidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pagina-cabecalho">
+      <p class="eyebrow">Privacidade e segurança</p>
+      <h1>Um protótipo que coleta o mínimo necessário.</h1>
+      <p>O mural é uma demonstração acadêmica. Não envie informações reais, pessoais, comerciais sigilosas ou dados que possam identificar alguém.</p>
+    </section>
+
+    <section class="secao privacidade-secao" aria-labelledby="dados-titulo">
+      <div class="secao-cabecalho">
+        <h2 id="dados-titulo">O que acontece com as informações?</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <i class="fa-solid fa-database" aria-hidden="true"></i>
+          <h3>Dados de demonstração</h3>
+          <p>O mural guarda apenas tipo de publicação, item, município/região e detalhes opcionais em memória enquanto a página está aberta.</p>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+          <h3>Sem identificação pessoal</h3>
+          <p>Não pedimos nome, telefone, e-mail, endereço completo, documentos ou dados financeiros. Use somente conteúdo fictício nos testes.</p>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+          <h3>Sem persistência</h3>
+          <p>Os dados não são enviados a servidor e desaparecem ao recarregar ou fechar a página. O protótipo não é um canal real de negociação.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao riscos-secao" aria-labelledby="riscos-titulo">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Riscos e cuidados</p>
+        <h2 id="riscos-titulo">Ameaças consideradas no desenho</h2>
+      </div>
+      <ol class="lista-riscos">
+        <li><strong>Publicação de dado pessoal ou conteúdo malicioso:</strong> limitar tamanho e formato da entrada, não solicitar identificadores e renderizar texto como texto, nunca como HTML.</li>
+        <li><strong>Informação falsa ou anúncio enganoso:</strong> em uma versão real, identificar fontes, oferecer denúncia/moderação e explicar que os dados publicados precisam ser verificados.</li>
+        <li><strong>Acesso indevido ou perda de dados num serviço futuro:</strong> exigir autenticação e autorização, usar HTTPS, coletar o mínimo, controlar acesso e manter cópias de segurança protegidas.</li>
+      </ol>
+      <p class="nota-limitacao">Como os registros atuais existem apenas na memória do navegador, este protótipo não implementa contas, armazenamento persistente, moderação nem transações.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="marca-rodape">Campo & Mercados Locais</div>
+      <p>Conectando produção, mercado e comunidade.</p>
+      <a href="Home.html#mural">Voltar ao mural</a>
+    </div>
+    <p class="footer-bottom">Protótipo acadêmico de Tecnologia Cidadã · 2026</p>
+  </footer>
+</body>
+</html>
