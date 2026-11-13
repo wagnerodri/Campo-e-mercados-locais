@@ -1,4 +1,70 @@
-document.addEventListener('DOMContentLoaded', iniciarMural);
+document.addEventListener('DOMContentLoaded', () => {
+  iniciarTema();
+  iniciarMural();
+});
+
+function iniciarTema() {
+  const botoes = document.querySelectorAll('.botao-tema');
+  if (!botoes.length) return;
+
+  const preferenciaSistema = window.matchMedia('(prefers-color-scheme: dark)');
+  let temaSalvo = null;
+
+  try {
+    const temaArmazenado = window.localStorage.getItem('campo-mercados-tema');
+    if (temaArmazenado === 'claro' || temaArmazenado === 'escuro') {
+      temaSalvo = temaArmazenado;
+    }
+  } catch (erro) {
+    console.error('Não foi possível carregar a preferência de tema.', erro);
+  }
+
+  let seguirSistema = temaSalvo === null;
+  aplicarTema(temaSalvo || (preferenciaSistema.matches ? 'escuro' : 'claro'), botoes);
+
+  botoes.forEach((botao) => {
+    botao.addEventListener('click', () => {
+      seguirSistema = false;
+      const temaAtual = document.documentElement.dataset.tema;
+      const novoTema = temaAtual === 'escuro' ? 'claro' : 'escuro';
+      aplicarTema(novoTema, botoes);
+
+      try {
+        window.localStorage.setItem('campo-mercados-tema', novoTema);
+      } catch (erro) {
+        console.error('Não foi possível salvar a preferência de tema.', erro);
+      }
+    });
+  });
+
+  const atualizarTemaDoSistema = (evento) => {
+    if (seguirSistema) {
+      aplicarTema(evento.matches ? 'escuro' : 'claro', botoes);
+    }
+  };
+
+  if (typeof preferenciaSistema.addEventListener === 'function') {
+    preferenciaSistema.addEventListener('change', atualizarTemaDoSistema);
+  } else if (typeof preferenciaSistema.addListener === 'function') {
+    preferenciaSistema.addListener(atualizarTemaDoSistema);
+  }
+}
+
+function aplicarTema(tema, botoes) {
+  const temaEscuro = tema === 'escuro';
+  document.documentElement.dataset.tema = temaEscuro ? 'escuro' : 'claro';
+
+  botoes.forEach((botao) => {
+    const rotulo = temaEscuro ? 'Ativar tema claro' : 'Ativar tema escuro';
+    const icone = botao.querySelector('i');
+    botao.setAttribute('aria-label', rotulo);
+    botao.setAttribute('title', rotulo);
+    botao.setAttribute('aria-pressed', String(temaEscuro));
+    botao.querySelector('span').textContent = temaEscuro ? 'Claro' : 'Escuro';
+    icone.classList.toggle('fa-sun', temaEscuro);
+    icone.classList.toggle('fa-moon', !temaEscuro);
+  });
+}
 
 function iniciarMural() {
   try {

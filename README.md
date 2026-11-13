@@ -1,6 +1,6 @@
 # P2 — Campo e Mercados Locais
 
-Protótipo acadêmico de Tecnologia Cidadã para aproximar pequenos produtores e a comunidade local.
+Campo-e-mercados-locais conecta pequenos produtores e a comunidade local.
 
 ## Objetivo e público
 
@@ -19,6 +19,7 @@ ODS relacionados:
 - Bootstrap 5.3 para o grid e os cards da página inicial.
 - Font Awesome 6.5 para ícones.
 - Git e GitHub.
+- Temas claro e escuro, com preferência inicial do dispositivo, alternância por teclado e suporte a movimento reduzido.
 
 ## Executar
 
@@ -60,7 +61,7 @@ Cada registro contém:
 | `cidade` | Município ou região (2–50 caracteres) |
 | `detalhes` | Texto opcional (até 240 caracteres) |
 
-O painel de atividades registra data/hora, ação e resultado. O protótipo não coleta dados pessoais, não transmite registros e não representa um canal real de negociação.
+O painel de atividades registra data/hora, ação e resultado. As publicações ficam em memória e não são transmitidas; a preferência de tema claro/escuro é armazenada localmente no navegador. O protótipo não coleta dados pessoais nem representa um canal real de negociação.
 
 ## Segurança e privacidade
 
@@ -75,6 +76,7 @@ O painel de atividades registra data/hora, ação e resultado. O protótipo não
 Testes executados no navegador:
 
 - Celular (390 × 844), tablet (768 × 1024) e desktop (1440 × 900): sem rolagem horizontal; navegação mobile abre e navegação desktop fica visível.
+- Tema claro/escuro: início segue a preferência do dispositivo; alternância por botão acessível atualiza o rótulo e mantém a escolha nas páginas.
 - CRUD: item de teste adicionado, editado, listado e removido; painel registrou data/hora, ação e resultado.
 - Campo obrigatório vazio, texto só com espaços e tentativa de inserir marcação são rejeitados. O limite HTML de 60 caracteres no item foi aplicado; limites e formato também são verificados no JavaScript.
 - As publicações são mantidas somente em memória; recarregar limpa o mural.
@@ -85,7 +87,7 @@ Capturas:
 ![Tela inicial em tablet](docs/prints/tablet.png)
 ![Mural em desktop](docs/prints/desktop.png)
 
-Relatório: [PDF](docs/relatorio.pdf) · [fonte HTML](docs/relatorio.html). A evidência local permanece pendente porque a equipe ainda não escolheu região nem coletou conversa, observação ou dado público.
+Relatório: [PDF](docs/relatorio.pdf) · [fonte HTML](docs/relatorio.html). O território escolhido é Campanário, Diadema (SP); a evidência local permanece pendente até a equipe coletar uma conversa, observação ou dado público.
 
 ## Sustentabilidade como negócio de impacto
 

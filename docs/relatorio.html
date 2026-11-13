@@ -156,11 +156,11 @@
         <tr><td>somos.html</td><td>Problema proposto, fluxo de uso e modelo de impacto.</td></tr>
         <tr><td>profissionais.html</td><td>Atores que podem participar da rede local.</td></tr>
         <tr><td>contatos.html</td><td>Aviso de privacidade, ameaças e limitações.</td></tr>
-        <tr><td>style.css</td><td>Layout Mobile First, acessibilidade visual e media queries.</td></tr>
-        <tr><td>script.js</td><td>Validação, operações CRUD, atualização do DOM e registro de atividades.</td></tr>
+        <tr><td>style.css</td><td>Layout Mobile First, temas claro/escuro, acessibilidade visual e media queries.</td></tr>
+        <tr><td>script.js</td><td>Alternância acessível de tema, validação, operações CRUD, atualização do DOM e registro de atividades.</td></tr>
       </tbody>
     </table>
-    <p>O navegador valida os campos e o JavaScript guarda os registros em um array em memória. Os itens são desenhados no DOM com criação de elementos e <code>textContent</code>, sem interpretar a entrada como HTML. Recarregar a página apaga os dados.</p>
+    <p>O navegador valida os campos e o JavaScript guarda os registros em um array em memória. Os itens são desenhados no DOM com criação de elementos e <code>textContent</code>, sem interpretar a entrada como HTML. Recarregar apaga as publicações; apenas a preferência de tema é salva localmente.</p>
 
     <h3>Modelo de cada publicação</h3>
     <table>
@@ -177,7 +177,7 @@
     </table>
 
     <h3>Tecnologias</h3>
-    <p>HTML5 semântico, CSS3, JavaScript, Bootstrap 5.3 (grid e cards) e Font Awesome 6.5 (ícones). O CSS é Mobile First; o layout muda em 600 px e 900 px.</p>
+    <p>HTML5 semântico, CSS3, JavaScript, Bootstrap 5.3 (grid e cards) e Font Awesome 6.5 (ícones). O CSS é Mobile First; o layout muda em 600 px e 900 px. O tema inicial segue a preferência do dispositivo, um botão acessível alterna entre claro e escuro e animações respeitam movimento reduzido.</p>
   </section>
 
   <section class="pagina">
@@ -191,13 +191,13 @@
 
     <h2>Validação do protótipo</h2>
     <p>Testado no navegador em 390 × 844 (celular), 768 × 1024 (tablet) e 1440 × 900 (desktop), sem rolagem horizontal; o menu mobile abre e a navegação desktop permanece visível. O fluxo CRUD adicionou, listou, editou e removeu um item e registrou data/hora, ação e resultado.</p>
-    <p>Entradas obrigatórias vazias, texto só com espaços e tentativa de inserir marcação foram rejeitadas. O limite de 60 caracteres do campo item foi aplicado pelo HTML. As publicações não persistem após recarregar a página.</p>
+    <p>Entradas obrigatórias vazias, texto só com espaços e tentativa de inserir marcação foram rejeitadas. O limite de 60 caracteres do campo item foi aplicado pelo HTML. O botão de tema é operável por teclado e atualiza o rótulo acessível. As publicações não persistem após recarregar a página.</p>
     <div class="caixa pendente">
       <strong>Validação da necessidade ainda pendente:</strong> a região foi definida como Campanário, Diadema (SP), mas ainda não houve conversa, observação ou pesquisa de dado público. Esta validação deve ser feita pela equipe com cidadãos da região antes da entrega final.
     </div>
 
     <h2>Limitações e próximos passos</h2>
-    <p>Não há backend, armazenamento persistente, contas, moderação, busca de clima/preços em tempo real nem canal real de negociação. O e-mail e contato de parceiros não são coletados. O próximo passo é validar a necessidade com cidadãos da região e revisar acessibilidade e utilidade do fluxo.</p>
+    <p>Não há backend, armazenamento persistente das publicações, contas, moderação, busca de clima/preços em tempo real nem canal real de negociação. A preferência de tema fica apenas no navegador; e-mail e contatos de parceiros não são coletados. O próximo passo é validar a necessidade com cidadãos da região.</p>
 
     <h2>Declaração de IA e créditos</h2>
     <p>Foi utilizado apoio de IA para adaptar o código-base, implementar interações e preparar a documentação. Recursos de terceiros: Bootstrap (getbootstrap.com), Font Awesome (fontawesome.com) e imagem de fundo Unsplash (images.unsplash.com/photo-1500937386664-56d1dfef3854).</p>
