@@ -142,24 +142,24 @@ h3 {
 
 h1 {
   max-width: 760px;
-  margin-bottom: 14px;
-  font-size: clamp(2.1rem, 8vw, 2.8rem);
+  margin-bottom: 10px;
+  font-size: clamp(1.9rem, 6vw, 2.45rem);
   letter-spacing: -0.025em;
 }
 
 h2 {
-  margin-bottom: 14px;
-  font-size: clamp(1.7rem, 6vw, 2.35rem);
+  margin-bottom: 10px;
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
   letter-spacing: -0.02em;
 }
 
 h3 {
-  margin-bottom: 12px;
-  font-size: 1.35rem;
+  margin-bottom: 9px;
+  font-size: 1.2rem;
 }
 
 p {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 /* Cabecalho, marca, menu e controle de tema. */
@@ -168,11 +168,11 @@ p {
   z-index: 20;
   top: 0;
   display: flex;
-  min-height: 76px;
+  min-height: 70px;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   background: var(--topo-fundo);
   border-bottom: 1px solid var(--borda);
 }
@@ -264,7 +264,7 @@ p {
 }
 
 #nav-principal a {
-  padding: 12px 4px;
+  padding: 10px 4px;
   border-bottom: 1px solid var(--borda);
   font-size: 0.95rem;
   text-decoration: none;
@@ -283,7 +283,7 @@ p {
 /* Banner inicial e botoes principais. */
 .hero {
   display: flex;
-  min-height: 540px;
+  min-height: 440px;
   align-items: center;
   background:
     linear-gradient(90deg, rgba(13, 43, 53, 0.86), rgba(13, 43, 53, 0.42)),
@@ -298,7 +298,7 @@ p {
 }
 
 .hero-conteudo {
-  padding: 76px 0;
+  padding: 56px 0;
   color: var(--branco);
 }
 
@@ -322,11 +322,11 @@ p {
 
 .btn {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   gap: 9px;
-  padding: 12px 18px;
+  padding: 10px 16px;
   border: 0;
   border-radius: 4px;
   font-size: 0.92rem;
@@ -367,18 +367,18 @@ p {
 .secao {
   width: min(1160px, 100%);
   margin: 0 auto;
-  padding: 72px 20px;
+  padding: 56px 18px;
 }
 
 .secao-cabecalho {
   max-width: 700px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
+  gap: 16px;
 }
 
 .secao-cabecalho h2,
@@ -389,7 +389,7 @@ p {
 .info-card,
 .card {
   height: 100%;
-  padding: 24px;
+  padding: 20px;
   background: var(--superficie);
   border: 0;
   border-top: 4px solid var(--terra);
@@ -404,7 +404,7 @@ p {
 .info-card .card-title {
   color: var(--verde-escuro);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
@@ -415,9 +415,9 @@ p {
 .card-icone,
 .card > i {
   display: block;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   color: var(--terra-escuro);
-  font-size: 1.8rem;
+  font-size: 1.65rem;
 }
 
 .card h3 {
@@ -436,14 +436,14 @@ p {
 .mural-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
+  gap: 18px;
   align-items: start;
 }
 
 .formulario-mural,
 .lista-painel {
   min-width: 0;
-  padding: 22px;
+  padding: 18px;
   background: var(--superficie);
   border: 1px solid var(--borda);
   box-shadow: var(--sombra);
@@ -456,7 +456,7 @@ p {
 
 .formulario-mural label {
   display: block;
-  margin: 17px 0 6px;
+  margin: 14px 0 5px;
   color: var(--verde-escuro);
   font-size: 0.88rem;
   font-weight: 700;
@@ -489,8 +489,8 @@ p {
 }
 
 .aviso-privacidade {
-  margin: 20px 0;
-  padding: 12px;
+  margin: 16px 0;
+  padding: 10px;
   color: var(--verde-escuro);
   background: var(--verde-claro);
   font-size: 0.84rem;
@@ -570,7 +570,7 @@ p {
   margin: 0 0 4px;
   color: var(--verde-escuro);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.18rem;
+  font-size: 1.05rem;
 }
 
 .registro-regiao {
@@ -612,8 +612,8 @@ p {
 }
 
 .atividades {
-  margin-top: 26px;
-  padding-top: 20px;
+  margin-top: 22px;
+  padding-top: 16px;
   border-top: 1px solid var(--borda);
 }
 
@@ -650,7 +650,7 @@ p {
 
 /* Bloco de destaque da proposta de impacto. */
 .destaque {
-  padding: 64px 20px;
+  padding: 52px 20px;
   color: var(--branco);
   background: var(--verde);
 }
@@ -670,8 +670,8 @@ p {
 
 /* Cabecalhos usados nas paginas internas. */
 .pagina-cabecalho {
-  padding-top: 68px;
-  padding-bottom: 46px;
+  padding-top: 52px;
+  padding-bottom: 32px;
 }
 
 .pagina-cabecalho h1 {
@@ -687,12 +687,12 @@ p {
 .sobre-grid {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 0 20px 64px;
+  margin: 0 20px 48px;
   background: var(--verde-claro);
 }
 
 .sobre-texto {
-  padding: 28px;
+  padding: 22px;
 }
 
 .sobre-texto h2 {
@@ -701,11 +701,11 @@ p {
 
 .proposta-visual {
   display: flex;
-  min-height: 210px;
+  min-height: 180px;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 24px;
+  padding: 18px;
   color: var(--verde-link);
   background:
     radial-gradient(circle at 20% 80%, rgba(217, 146, 66, 0.2), transparent 35%),
@@ -721,7 +721,7 @@ p {
 /* Marcadores dos passos e ajustes das paginas de rede e privacidade. */
 .passo-numero {
   display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--terra-escuro);
   font-size: 0.82rem;
   font-weight: 800;
@@ -729,7 +729,7 @@ p {
 }
 
 .profissionais-intro {
-  padding-bottom: 24px;
+  padding-bottom: 18px;
 }
 
 .privacidade-secao {
@@ -742,7 +742,7 @@ p {
 
 .lista-riscos {
   display: grid;
-  gap: 16px;
+  gap: 12px;
   padding-left: 24px;
 }
 
@@ -750,53 +750,89 @@ p {
   padding-left: 6px;
 }
 
-.nota-limitacao {
-  margin-top: 26px;
-  padding: 16px;
-  color: var(--aviso-texto);
-  background: var(--aviso-fundo);
-  border-left: 4px solid var(--terra);
-}
-
 /* Rodape compartilhado entre as paginas. */
 .footer {
-  padding: 42px 20px 18px;
-  color: var(--branco);
+  padding: 36px 20px 16px;
+  color: var(--rodape-texto);
   background: var(--rodape-fundo);
 }
 
 .footer-container {
   display: grid;
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
   max-width: 1160px;
   margin: 0 auto;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
 }
 
-.footer-container p {
+.footer-identidade {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.marca-rodape {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--branco);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.marca-rodape span {
+  margin: 0 5px;
+  color: var(--terra);
+}
+
+.footer-identidade p {
+  max-width: 36ch;
   margin: 0;
   color: var(--rodape-texto);
 }
 
-.footer-container a {
-  width: fit-content;
-  color: var(--rodape-texto);
+.footer-titulo {
+  margin: 0 0 14px;
+  color: var(--branco);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.marca-rodape {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+.footer-nav {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+}
+
+.footer-nav a,
+.footer-nota a {
+  width: fit-content;
+  color: var(--rodape-texto);
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-nota a:hover {
+  color: var(--branco);
+  text-decoration: underline;
 }
 
 .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
   max-width: 1160px;
   margin: 0 auto;
-  padding-top: 16px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.22);
   color: var(--rodape-texto);
   font-size: 0.82rem;
-  text-align: center;
 }
 
 [hidden] {
@@ -806,11 +842,11 @@ p {
 /* Ajustes para telas a partir de 600 px. */
 @media (min-width: 600px) {
   h1 {
-    font-size: clamp(2.7rem, 5.5vw, 3.7rem);
+    font-size: clamp(2.2rem, 4vw, 2.9rem);
   }
 
   .secao {
-    padding: 88px 28px;
+    padding: 68px 24px;
   }
 
   .cards {
@@ -823,17 +859,17 @@ p {
 
   .formulario-mural,
   .lista-painel {
-    padding: 26px;
+    padding: 22px;
   }
 
   .sobre-grid {
     grid-template-columns: 1.1fr 0.9fr;
     max-width: 1160px;
-    margin: 0 auto 80px;
+    margin: 0 auto 64px;
   }
 
   .sobre-texto {
-    padding: clamp(30px, 5vw, 64px);
+    padding: clamp(24px, 4vw, 48px);
   }
 
   .proposta-visual {
@@ -850,8 +886,7 @@ p {
   }
 
   .footer-container {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 1fr);
     gap: 24px;
   }
 }
@@ -902,7 +937,7 @@ p {
     position: static;
     display: flex;
     flex-direction: row;
-    gap: 26px;
+    gap: 20px;
     padding: 0;
     background: transparent;
     border: 0;
@@ -910,12 +945,12 @@ p {
   }
 
   #nav-principal a {
-    padding: 10px 0;
+    padding: 8px 0;
     border: 0;
   }
 
   .hero {
-    min-height: 620px;
+    min-height: 500px;
   }
 
   .hero-conteudo,
@@ -924,7 +959,7 @@ p {
   }
 
   .hero-conteudo {
-    padding: 100px 0;
+    padding: 72px 0;
   }
 
   .hero-conteudo > p:not(.eyebrow) {
@@ -936,12 +971,12 @@ p {
   }
 
   .destaque {
-    padding: 86px 28px;
+    padding: 66px 24px;
   }
 
   .pagina-cabecalho {
-    padding-top: 100px;
-    padding-bottom: 64px;
+    padding-top: 72px;
+    padding-bottom: 44px;
   }
 }
 

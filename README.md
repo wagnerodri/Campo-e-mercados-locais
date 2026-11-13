@@ -6,7 +6,9 @@ Campo-e-mercados-locais conecta pequenos produtores e a comunidade local.
 
 O mural permite demonstrar a publicação e organização de ofertas e necessidades relacionadas à produção local. O público principal são pequenos produtores; cooperativas, comércio, escolas e consumidores podem participar da rede. O território definido para validação é o Campanário, em Diadema (SP).
 
-O problema de acesso a informação e canais de venda é a hipótese que orienta o protótipo. Para esta atividade, usamos um cenário fictício: um pequeno produtor hipotético precisa divulgar sua produção e encontrar compradores próximos. Não houve entrevista, observação ou pesquisa local; o exemplo não deve ser apresentado como dado real nem como validação da hipótese.
+Como evidência pública de contexto, a [Lei Municipal nº 4.206/2022 de Diadema](https://www.cmdiadema.sp.gov.br/legislacao/leis_integra.php?chave=420622) institui a Semana Municipal da Agricultura Familiar. O art. 2º prevê apoio à agricultura familiar e a cooperativas, fortalecimento de políticas públicas e mais visibilidade para pequenos produtores. A lei demonstra reconhecimento institucional do tema, mas não comprova uma dificuldade específica de venda no Campanário.
+
+O problema de acesso a informação e canais de venda permanece como hipótese do protótipo. O exemplo de um produtor que precisa divulgar sua produção e encontrar compradores é fictício; não houve entrevista nem observação de campo.
 
 ODS relacionados:
 
@@ -87,7 +89,7 @@ Capturas:
 ![Tela inicial em tablet](docs/prints/tablet.png)
 ![Mural em desktop](docs/prints/desktop.png)
 
-Relatório: [PDF](docs/relatorio.pdf) · [fonte HTML](docs/relatorio.html). O território de referência é Campanário, Diadema (SP), mas o caso apresentado é uma simulação acadêmica e não uma evidência coletada na região.
+Relatório: [PDF](docs/relatorio.pdf) · [fonte HTML](docs/relatorio.html). O relatório usa a Lei Municipal nº 4.206/2022 como evidência pública de contexto e identifica como hipótese não validada a dificuldade específica de acesso a compradores no Campanário.
 
 ## Sustentabilidade como negócio de impacto
 
