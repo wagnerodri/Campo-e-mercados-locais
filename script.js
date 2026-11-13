@@ -1,8 +1,10 @@
+// Inicia o tema e o mural depois que o documento é carregado.
 document.addEventListener('DOMContentLoaded', () => {
   iniciarTema();
   iniciarMural();
 });
 
+// Carrega o tema salvo ou segue a preferência do dispositivo.
 function iniciarTema() {
   const botoes = document.querySelectorAll('.botao-tema');
   if (!botoes.length) return;
@@ -37,6 +39,7 @@ function iniciarTema() {
     });
   });
 
+  // Atualiza o tema quando a preferência do dispositivo muda.
   const atualizarTemaDoSistema = (evento) => {
     if (seguirSistema) {
       aplicarTema(evento.matches ? 'escuro' : 'claro', botoes);
@@ -50,6 +53,7 @@ function iniciarTema() {
   }
 }
 
+// Aplica o tema e atualiza os rótulos acessíveis dos botões.
 function aplicarTema(tema, botoes) {
   const temaEscuro = tema === 'escuro';
   document.documentElement.dataset.tema = temaEscuro ? 'escuro' : 'claro';
@@ -66,6 +70,7 @@ function aplicarTema(tema, botoes) {
   });
 }
 
+// Prepara os dados e eventos do mural.
 function iniciarMural() {
   try {
     const form = document.getElementById('form-mural');
@@ -100,6 +105,7 @@ function iniciarMural() {
   }
 }
 
+// Valida o formulário e adiciona ou atualiza uma publicação.
 function salvarRegistro(event, estado) {
   event.preventDefault();
 
@@ -182,6 +188,7 @@ function salvarRegistro(event, estado) {
   }
 }
 
+// Executa a edição ou remoção escolhida na lista.
 function tratarAcaoDaLista(event, estado) {
   const botao = event.target.closest('button[data-acao]');
   if (!botao) return;
@@ -208,6 +215,7 @@ function tratarAcaoDaLista(event, estado) {
   }
 }
 
+// Preenche o formulário com os dados da publicação selecionada.
 function preencherFormularioParaEdicao(registro) {
   document.getElementById('registro-id').value = registro.id;
   document.getElementById('tipo').value = registro.tipo;
@@ -220,12 +228,14 @@ function preencherFormularioParaEdicao(registro) {
   mostrarMensagem('Edite os campos e salve as alterações.', 'neutro');
 }
 
+// Cancela a edição e limpa o formulário.
 function cancelarEdicao() {
   document.getElementById('form-mural').reset();
   limparModoEdicao();
   mostrarMensagem('Edição cancelada.', 'neutro');
 }
 
+// Restaura o formulário para adicionar uma nova publicação.
 function limparModoEdicao() {
   document.getElementById('registro-id').value = '';
   document.getElementById('form-titulo').textContent = 'Publicar no mural';
@@ -233,6 +243,7 @@ function limparModoEdicao() {
   document.getElementById('cancelar-edicao').hidden = true;
 }
 
+// Atualiza os cartões, o contador e o aviso de lista vazia.
 function renderizarRegistros(estado) {
   const lista = document.getElementById('lista-registros');
   const fragmento = document.createDocumentFragment();
@@ -273,6 +284,7 @@ function renderizarRegistros(estado) {
     `${estado.registros.length} ${estado.registros.length === 1 ? 'registro' : 'registros'}`;
 }
 
+// Cria um botão de ação para uma publicação.
 function criarBotaoAcao(rotulo, acao, id) {
   const botao = document.createElement('button');
   botao.type = 'button';
@@ -283,6 +295,7 @@ function criarBotaoAcao(rotulo, acao, id) {
   return botao;
 }
 
+// Registra e exibe a data, a ação e o resultado de uma atividade.
 function registrarAtividade(estado, acao, resultado) {
   const data = new Intl.DateTimeFormat('pt-BR', {
     dateStyle: 'short',
@@ -307,16 +320,19 @@ function registrarAtividade(estado, acao, resultado) {
   document.getElementById('atividades-vazias').hidden = estado.atividades.length > 0;
 }
 
+// Identifica caracteres de controle ou marcação no texto.
 function contemControleOuMarcacao(valor) {
   return /[<>]/.test(valor) || /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(valor);
 }
 
+// Exibe uma mensagem de retorno no formulário.
 function mostrarMensagem(texto, tipo) {
   const mensagem = document.getElementById('mensagem-form');
   mensagem.textContent = texto;
   mensagem.className = `mensagem-form mensagem-${tipo}`;
 }
 
+// Exibe um erro genérico sem revelar detalhes técnicos.
 function mostrarErroGenerico() {
   mostrarMensagem('Não foi possível carregar os dados. Tente novamente.', 'erro');
 }
